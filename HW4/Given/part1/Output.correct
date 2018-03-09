@@ -1,0 +1,131 @@
+
+TESTING np
+
+testing: np_names(Name)
+Name = grandcanyon
+
+Name = yosemite
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_names_not_yosemite(Name)
+Name = grandcanyon
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_activities_yosemite(Activity)
+Activity = [hiking,camping,rockclimbing]
+
+testing: np_states_yosemite(State)
+State = [ca]
+
+testing: np_states_grandcanyon(State)
+State = [az,ut]
+
+testing: np_states(yosemite,State)
+State = [ca]
+
+testing: np_states(grandcanyon,State)
+State = [az,ut]
+
+testing: np_states(deathvalley,State)
+State = [ca,nv]
+
+testing: np_sorted_activities_yosemite(Activity)
+Activity = [camping,hiking,rockclimbing]
+
+testing: np_single_state(State)
+State = yosemite
+
+State = everglades
+
+State = drytortugas
+
+State = lassen
+
+State = bryce
+
+State = denali
+
+State = zion
+
+testing: np_multi_state(State)
+State = grandcanyon
+
+State = deathvalley
+
+State = ww2valorinthepacific
+
+State = dinosaur
+
+testing: np_pair_names(Pair of Names)
+Pair of Names = [drytortugas,everglades]
+
+Pair of Names = [lassen,yosemite]
+
+Pair of Names = [bryce,zion]
+
+testing: np_2_state_2_activities(Name)
+Name = grandcanyon
+
+Name = deathvalley
+
+Name = dinosaur
+
+
+TESTING an OR np_12_states_1or
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_12_states_2wo
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_camping_hiking_1or
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_2wo
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_sort
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+

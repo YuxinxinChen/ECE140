@@ -1,0 +1,164 @@
+;; DribbleNoTimeStamp of #<io terminal-stream> started.
+
+          BEGIN TESTING
+
+
+                    TEST-isLL2
+
+
+                              TEST-AN-IS on:  isll2
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    t
+
+testing:  (is-fun '(1 (a)))
+value:    t
+
+testing:  (is-fun '(1 (a b c)))
+value:    t
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    t
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    t
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-isLL2a
+
+
+                              TEST-AN-IS on:  isll2a
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    t
+
+testing:  (is-fun '(1 (a b c)))
+value:    t
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    t
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    t
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+          DONE TESTING
+
+;; DribbleNoTimeStamp of #<io terminal-stream> finished.

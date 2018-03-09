@@ -1,0 +1,1901 @@
+;; DribbleNoTimeStamp of #<io terminal-stream> started.
+
+          BEGIN TESTING
+
+
+                    TEST-isLL2
+
+
+                              TEST-AN-IS on:  isll2
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    t
+
+testing:  (is-fun '(1 (a)))
+value:    t
+
+testing:  (is-fun '(1 (a b c)))
+value:    t
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    t
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    t
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-isLL2a
+
+
+                              TEST-AN-IS on:  isll2a
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    t
+
+testing:  (is-fun '(1 (a b c)))
+value:    t
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    t
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    t
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-isLpairs
+
+
+                              TEST-AN-IS on:  islpairs-recursive
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    t
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  islpairs-iterative
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    t
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  islpairs-every
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    t
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    t
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-isLpairs1st
+
+
+                              TEST-AN-IS on:  islpairs1st-recursive
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  islpairs1st-iterative
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  islpairs1st-every
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    t
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    t
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    t
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    t
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    t
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-distribute
+
+
+                              TEST-AN-IS on:  distribute-recursive
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    ((1 a))
+
+testing:  (is-fun '(1 (a b c)))
+value:    ((1 a) (1 b) (1 c))
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    ((1 a) (1 b) (1 c) (1 d) (1 e))
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    (((1 2) 3) ((1 2) 4))
+
+testing:  (is-fun '((1 2) (a)))
+value:    (((1 2) a))
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    (((1 2) a) ((1 2) c) ((1 2) e))
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  distribute-iterative
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    ((1 a))
+
+testing:  (is-fun '(1 (a b c)))
+value:    ((1 a) (1 b) (1 c))
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    ((1 a) (1 b) (1 c) (1 d) (1 e))
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    (((1 2) 3) ((1 2) 4))
+
+testing:  (is-fun '((1 2) (a)))
+value:    (((1 2) a))
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    (((1 2) a) ((1 2) c) ((1 2) e))
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  distribute-mapcar
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    ((1 a))
+
+testing:  (is-fun '(1 (a b c)))
+value:    ((1 a) (1 b) (1 c))
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    ((1 a) (1 b) (1 c) (1 d) (1 e))
+
+testing:  (is-fun '((1 2)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    (((1 2) 3) ((1 2) 4))
+
+testing:  (is-fun '((1 2) (a)))
+value:    (((1 2) a))
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    (((1 2) a) ((1 2) c) ((1 2) e))
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    nil
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-undistribute
+
+
+                              TEST-AN-IS on:  undistribute-recursive
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    (1 (2))
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    (1 (2 4 6))
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    ((1) (2 4 6))
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    (nil (2 4 6))
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    (a (2 4 6))
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  undistribute-iterative
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    (1 (2))
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    (1 (2 4 6))
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    ((1) (2 4 6))
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    (nil (2 4 6))
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    (a (2 4 6))
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                              TEST-AN-IS on:  undistribute-mapcar
+
+testing:  (is-fun 88)
+value:    nil
+
+testing:  (is-fun nil)
+value:    nil
+
+testing:  (is-fun '(1))
+value:    nil
+
+testing:  (is-fun '(1 2))
+value:    nil
+
+testing:  (is-fun '(1 (a)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c)))
+value:    nil
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    nil
+
+testing:  (is-fun '((1 2)))
+value:    (1 (2))
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a)))
+value:    nil
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    nil
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    nil
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    (1 (2 4 6))
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    nil
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    ((1) (2 4 6))
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    (nil (2 4 6))
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    (a (2 4 6))
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    nil
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    nil
+
+
+                    TEST-distribute+undistribute
+
+
+                              TEST-A-DISTRIBUTE+UNDISTRIBUTE on:  distribute-recursive  undistribute-recursive
+
+testing:  (undistribute-fun (distribute-fun '(1 (a b))))
+value:    (1 (a b))
+
+testing:  (undistribute-fun (distribute-fun '(2 (a b (c) (d e)))))
+value:    (2 (a b (c) (d e)))
+
+testing:  (distribute-fun (undistribute-fun '((1 a) (1 b))))
+value:    ((1 a) (1 b))
+
+testing:  (distribute-fun (undistribute-fun '((2 a) (2 (b c)) (2 e) (2 d))))
+value:    ((2 a) (2 (b c)) (2 e) (2 d))
+
+
+                              TEST-A-DISTRIBUTE+UNDISTRIBUTE on:  distribute-iterative  undistribute-iterative
+
+testing:  (undistribute-fun (distribute-fun '(1 (a b))))
+value:    (1 (a b))
+
+testing:  (undistribute-fun (distribute-fun '(2 (a b (c) (d e)))))
+value:    (2 (a b (c) (d e)))
+
+testing:  (distribute-fun (undistribute-fun '((1 a) (1 b))))
+value:    ((1 a) (1 b))
+
+testing:  (distribute-fun (undistribute-fun '((2 a) (2 (b c)) (2 e) (2 d))))
+value:    ((2 a) (2 (b c)) (2 e) (2 d))
+
+
+                              TEST-A-DISTRIBUTE+UNDISTRIBUTE on:  distribute-mapcar  undistribute-mapcar
+
+testing:  (undistribute-fun (distribute-fun '(1 (a b))))
+value:    (1 (a b))
+
+testing:  (undistribute-fun (distribute-fun '(2 (a b (c) (d e)))))
+value:    (2 (a b (c) (d e)))
+
+testing:  (distribute-fun (undistribute-fun '((1 a) (1 b))))
+value:    ((1 a) (1 b))
+
+testing:  (distribute-fun (undistribute-fun '((2 a) (2 (b c)) (2 e) (2 d))))
+value:    ((2 a) (2 (b c)) (2 e) (2 d))
+
+
+                    TEST-MY-EVERY
+
+testing:  (my-every #'listp 'nil)
+value:    t
+
+testing:  (my-every #'listp '(1))
+value:    nil
+
+testing:  (my-every #'listp '(1 2))
+value:    nil
+
+testing:  (my-every #'listp '(1 2 3))
+value:    nil
+
+testing:  (my-every #'integerp 'nil)
+value:    t
+
+testing:  (my-every #'integerp '(1))
+value:    t
+
+testing:  (my-every #'integerp '(1 2))
+value:    t
+
+testing:  (my-every #'integerp '(1 2 3))
+value:    t
+
+testing:  (my-every #'integerp '(1 a 2))
+value:    nil
+
+testing:  (my-every #'integerp '(a 1 2))
+value:    nil
+
+testing:  (my-every #'integerp '(1 2 a))
+value:    nil
+
+testing:  (my-every #'(lambda (a) (> a 4)) '(5 6 9))
+value:    t
+
+testing:  (my-every #'(lambda (a) (> a 4)) '(5 6 0 9))
+value:    nil
+
+
+                    TEST-MY-lenLL
+
+
+                              TEST-AN-IS on:  lenll
+
+testing:  (is-fun 88)
+value:    0
+
+testing:  (is-fun nil)
+value:    0
+
+testing:  (is-fun '(1))
+value:    1
+
+testing:  (is-fun '(1 2))
+value:    2
+
+testing:  (is-fun '(1 (a)))
+value:    2
+
+testing:  (is-fun '(1 (a b c)))
+value:    3
+
+testing:  (is-fun '(1 (a b c d e)))
+value:    5
+
+testing:  (is-fun '((1 2)))
+value:    2
+
+testing:  (is-fun '((1 2) (3 4)))
+value:    2
+
+testing:  (is-fun '((1 2) (a)))
+value:    2
+
+testing:  (is-fun '((1 2) (a c e)))
+value:    3
+
+testing:  (is-fun '((1 2) (3 4) 5))
+value:    3
+
+testing:  (is-fun '((1 2) 3 (4) 5))
+value:    4
+
+testing:  (is-fun '((1 2) (3 4) (5 6)))
+value:    3
+
+testing:  (is-fun '((1 2) (1 4) (1 6)))
+value:    3
+
+testing:  (is-fun '((1 2) (3 4) (1 6)))
+value:    3
+
+testing:  (is-fun '(((1) 2) ((1) 4) ((1) 6)))
+value:    3
+
+testing:  (is-fun '((nil 2) (nil 4) (nil 6)))
+value:    3
+
+testing:  (is-fun '((a 2) (b 4) (a 6)))
+value:    3
+
+testing:  (is-fun '((a 2) (a 4) (a 6)))
+value:    3
+
+testing:  (is-fun '((((a 2 3 4 5))) (a 4) (a 6)))
+value:    5
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 4) (a 6)))
+value:    5
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) (a 6)))
+value:    7
+
+testing:  (is-fun '(((a (2) (3) 4 5)) (a 1 2 3 8 7 4) ((a b c d e f g 6))))
+value:    8
+
+
+                    TEST-SIMPLIFY-NOT
+
+
+                              TEST-A-SIMPLIFY on:  simplify-not
+
+testing:  (simplify-fun 44)
+value:    44
+
+testing:  (simplify-fun t)
+value:    t
+
+testing:  (simplify-fun nil)
+value:    nil
+
+testing:  (simplify-fun '(not t))
+value:    nil
+
+testing:  (simplify-fun '(not nil))
+value:    t
+
+testing:  (simplify-fun '(not (not t)))
+value:    t
+
+testing:  (simplify-fun '(not (not nil)))
+value:    nil
+
+testing:  (simplify-fun '(not (not (not t))))
+value:    nil
+
+testing:  (simplify-fun '(not (not (not nil))))
+value:    t
+
+testing:  (simplify-fun '(list (not (not nil))))
+value:    (list nil)
+
+testing:  (simplify-fun '(not (list (not nil))))
+value:    (not (list t))
+
+testing:  (simplify-fun '(not (not (list nil))))
+value:    (not (not (list nil)))
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (not (list nil)))))
+value:    (equal (not (not (list nil))) (not (not (list nil))))
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (list (not nil)))))
+value:    (equal (not (not (list nil))) (not (list t)))
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (list (not nil)))))
+value:    (equal (not (list t)) (not (list t)))
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (not (list nil)))))
+value:    (equal (not (list t)) (not (not (list nil))))
+
+testing:  (simplify-fun '(and))
+value:    (and)
+
+testing:  (simplify-fun '(or))
+value:    (or)
+
+testing:  (simplify-fun '(and t))
+value:    (and t)
+
+testing:  (simplify-fun '(and t t))
+value:    (and t t)
+
+testing:  (simplify-fun '(and t t t))
+value:    (and t t t)
+
+testing:  (simplify-fun '(or t))
+value:    (or t)
+
+testing:  (simplify-fun '(or t))
+value:    (or t)
+
+testing:  (simplify-fun '(or t t t))
+value:    (or t t t)
+
+testing:  (simplify-fun '(and nil))
+value:    (and nil)
+
+testing:  (simplify-fun '(and nil nil))
+value:    (and nil nil)
+
+testing:  (simplify-fun '(and nil nil nil))
+value:    (and nil nil nil)
+
+testing:  (simplify-fun '(or nil))
+value:    (or nil)
+
+testing:  (simplify-fun '(or nil nil))
+value:    (or nil nil)
+
+testing:  (simplify-fun '(or nil nil nil))
+value:    (or nil nil nil)
+
+testing:  (simplify-fun '(and t nil))
+value:    (and t nil)
+
+testing:  (simplify-fun '(and nil t nil))
+value:    (and nil t nil)
+
+testing:  (simplify-fun '(and nil t nil t nil))
+value:    (and nil t nil t nil)
+
+testing:  (simplify-fun '(or t nil))
+value:    (or t nil)
+
+testing:  (simplify-fun '(or nil t nil))
+value:    (or nil t nil)
+
+testing:  (simplify-fun '(or nil t nil t nil))
+value:    (or nil t nil t nil)
+
+testing:  (simplify-fun '(and a))
+value:    (and a)
+
+testing:  (simplify-fun '(or a))
+value:    (or a)
+
+testing:  (simplify-fun '(and t a))
+value:    (and t a)
+
+testing:  (simplify-fun '(and a t))
+value:    (and a t)
+
+testing:  (simplify-fun '(and a t b))
+value:    (and a t b)
+
+testing:  (simplify-fun '(and a nil t b t c))
+value:    (and a nil t b t c)
+
+testing:  (simplify-fun '(and a t b t c))
+value:    (and a t b t c)
+
+testing:  (simplify-fun '(or nil a))
+value:    (or nil a)
+
+testing:  (simplify-fun '(or a nil))
+value:    (or a nil)
+
+testing:  (simplify-fun '(or t a nil))
+value:    (or t a nil)
+
+testing:  (simplify-fun '(or nil a t nil))
+value:    (or nil a t nil)
+
+testing:  (simplify-fun '(or nil t nil a t nil b))
+value:    (or nil t nil a t nil b)
+
+testing:  (simplify-fun '(or nil nil a t nil b))
+value:    (or nil nil a t nil b)
+
+testing:  (simplify-fun '(and and a nil t b t c))
+value:    (and and a nil t b t c)
+
+testing:  (simplify-fun '(and and a t b t c))
+value:    (and and a t b t c)
+
+testing:  (simplify-fun '(list and a nil t b t c))
+value:    (list and a nil t b t c)
+
+testing:  (simplify-fun '(or or nil nil a t nil b))
+value:    (or or nil nil a t nil b)
+
+testing:  (simplify-fun '(or or nil nil a nil b))
+value:    (or or nil nil a nil b)
+
+testing:  (simplify-fun '(list or nil nil a t nil b))
+value:    (list or nil nil a t nil b)
+
+testing:  (simplify-fun '(and (and t) (and t t t) t))
+value:    (and (and t) (and t t t) t)
+
+testing:  (simplify-fun '(and (and t) (and t a t) t))
+value:    (and (and t) (and t a t) t)
+
+testing:  (simplify-fun '(and (and t) (and t nil a t) t))
+value:    (and (and t) (and t nil a t) t)
+
+testing:  (simplify-fun '(and (and (or)) (and t nil a t) t))
+value:    (and (and (or)) (and t nil a t) t)
+
+testing:  (simplify-fun '(and (and (or t)) (and t t) t))
+value:    (and (and (or t)) (and t t) t)
+
+testing:  (simplify-fun '(list (and (and (or t)) (and t t) t)))
+value:    (list (and (and (or t)) (and t t) t))
+
+testing:  (simplify-fun '(list (and (and (atom (or t))) (and t t) t)))
+value:    (list (and (and (atom (or t))) (and t t) t))
+
+testing:  (simplify-fun '(list (and (and b (atom (or t))) (and t t) t)))
+value:    (list (and (and b (atom (or t))) (and t t) t))
+
+testing:  (simplify-fun '(or (or t) nil))
+value:    (or (or t) nil)
+
+testing:  (simplify-fun '(or (or nil) (and t a t) nil))
+value:    (or (or nil) (and t a t) nil)
+
+testing:  (simplify-fun '(or (or t) (and t nil a t) nil))
+value:    (or (or t) (and t nil a t) nil)
+
+testing:  
+(simplify-fun
+ '(list (and (and (not (not b)) (atom (not (or nil)))) (and t t) t)))
+value:    (list (and (and (not (not b)) (atom (not (or nil)))) (and t t) t))
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or t t) 3)))
+value:    (list (or (and (not (not b)) (atom (not (and nil)))) (or t t) 3))
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or 1 2) 3)))
+value:    (list (or (and (not (not b)) (atom (not (and nil)))) (or 1 2) 3))
+
+
+                    TEST-SIMPLIFY
+
+
+                              TEST-A-SIMPLIFY on:  simplify
+
+testing:  (simplify-fun 44)
+value:    44
+
+testing:  (simplify-fun t)
+value:    t
+
+testing:  (simplify-fun nil)
+value:    nil
+
+testing:  (simplify-fun '(not t))
+value:    nil
+
+testing:  (simplify-fun '(not nil))
+value:    t
+
+testing:  (simplify-fun '(not (not t)))
+value:    t
+
+testing:  (simplify-fun '(not (not nil)))
+value:    nil
+
+testing:  (simplify-fun '(not (not (not t))))
+value:    nil
+
+testing:  (simplify-fun '(not (not (not nil))))
+value:    t
+
+testing:  (simplify-fun '(list (not (not nil))))
+value:    (list nil)
+
+testing:  (simplify-fun '(not (list (not nil))))
+value:    (not (list t))
+
+testing:  (simplify-fun '(not (not (list nil))))
+value:    (not (not (list nil)))
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (not (list nil)))))
+value:    (equal (not (not (list nil))) (not (not (list nil))))
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (list (not nil)))))
+value:    (equal (not (not (list nil))) (not (list t)))
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (list (not nil)))))
+value:    (equal (not (list t)) (not (list t)))
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (not (list nil)))))
+value:    (equal (not (list t)) (not (not (list nil))))
+
+testing:  (simplify-fun '(and))
+value:    t
+
+testing:  (simplify-fun '(or))
+value:    nil
+
+testing:  (simplify-fun '(and t))
+value:    t
+
+testing:  (simplify-fun '(and t t))
+value:    t
+
+testing:  (simplify-fun '(and t t t))
+value:    t
+
+testing:  (simplify-fun '(or t))
+value:    t
+
+testing:  (simplify-fun '(or t))
+value:    t
+
+testing:  (simplify-fun '(or t t t))
+value:    t
+
+testing:  (simplify-fun '(and nil))
+value:    nil
+
+testing:  (simplify-fun '(and nil nil))
+value:    nil
+
+testing:  (simplify-fun '(and nil nil nil))
+value:    nil
+
+testing:  (simplify-fun '(or nil))
+value:    nil
+
+testing:  (simplify-fun '(or nil nil))
+value:    nil
+
+testing:  (simplify-fun '(or nil nil nil))
+value:    nil
+
+testing:  (simplify-fun '(and t nil))
+value:    nil
+
+testing:  (simplify-fun '(and nil t nil))
+value:    nil
+
+testing:  (simplify-fun '(and nil t nil t nil))
+value:    nil
+
+testing:  (simplify-fun '(or t nil))
+value:    t
+
+testing:  (simplify-fun '(or nil t nil))
+value:    t
+
+testing:  (simplify-fun '(or nil t nil t nil))
+value:    t
+
+testing:  (simplify-fun '(and a))
+value:    a
+
+testing:  (simplify-fun '(or a))
+value:    a
+
+testing:  (simplify-fun '(and t a))
+value:    a
+
+testing:  (simplify-fun '(and a t))
+value:    a
+
+testing:  (simplify-fun '(and a t b))
+value:    (and a b)
+
+testing:  (simplify-fun '(and a nil t b t c))
+value:    nil
+
+testing:  (simplify-fun '(and a t b t c))
+value:    (and a b c)
+
+testing:  (simplify-fun '(or nil a))
+value:    a
+
+testing:  (simplify-fun '(or a nil))
+value:    a
+
+testing:  (simplify-fun '(or t a nil))
+value:    t
+
+testing:  (simplify-fun '(or nil a t nil))
+value:    t
+
+testing:  (simplify-fun '(or nil t nil a t nil b))
+value:    t
+
+testing:  (simplify-fun '(or nil nil a t nil b))
+value:    t
+
+testing:  (simplify-fun '(and and a nil t b t c))
+value:    nil
+
+testing:  (simplify-fun '(and and a t b t c))
+value:    (and and a b c)
+
+testing:  (simplify-fun '(list and a nil t b t c))
+value:    (list and a nil t b t c)
+
+testing:  (simplify-fun '(or or nil nil a t nil b))
+value:    t
+
+testing:  (simplify-fun '(or or nil nil a nil b))
+value:    (or or a b)
+
+testing:  (simplify-fun '(list or nil nil a t nil b))
+value:    (list or nil nil a t nil b)
+
+testing:  (simplify-fun '(and (and t) (and t t t) t))
+value:    t
+
+testing:  (simplify-fun '(and (and t) (and t a t) t))
+value:    a
+
+testing:  (simplify-fun '(and (and t) (and t nil a t) t))
+value:    nil
+
+testing:  (simplify-fun '(and (and (or)) (and t nil a t) t))
+value:    nil
+
+testing:  (simplify-fun '(and (and (or t)) (and t t) t))
+value:    t
+
+testing:  (simplify-fun '(list (and (and (or t)) (and t t) t)))
+value:    (list t)
+
+testing:  (simplify-fun '(list (and (and (atom (or t))) (and t t) t)))
+value:    (list (atom t))
+
+testing:  (simplify-fun '(list (and (and b (atom (or t))) (and t t) t)))
+value:    (list (and b (atom t)))
+
+testing:  (simplify-fun '(or (or t) nil))
+value:    t
+
+testing:  (simplify-fun '(or (or nil) (and t a t) nil))
+value:    a
+
+testing:  (simplify-fun '(or (or t) (and t nil a t) nil))
+value:    t
+
+testing:  
+(simplify-fun
+ '(list (and (and (not (not b)) (atom (not (or nil)))) (and t t) t)))
+value:    (list (and (not (not b)) (atom t)))
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or t t) 3)))
+value:    (list t)
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or 1 2) 3)))
+value:    (list (or (and (not (not b)) (atom t)) (or 1 2) 3))
+
+
+                    TEST-CHECK
+
+
+                              TEST-A-SIMPLIFY on:  check
+
+testing:  (simplify-fun 44)
+value:    (t 44 44)
+
+testing:  (simplify-fun t)
+value:    (t t t)
+
+testing:  (simplify-fun nil)
+value:    (t nil nil)
+
+testing:  (simplify-fun '(not t))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(not nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(not (not t)))
+value:    (t t t)
+
+testing:  (simplify-fun '(not (not nil)))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(not (not (not t))))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(not (not (not nil))))
+value:    (t t t)
+
+testing:  (simplify-fun '(list (not (not nil))))
+value:    (t (nil) (nil))
+
+testing:  (simplify-fun '(not (list (not nil))))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(not (not (list nil))))
+value:    (t t t)
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (not (list nil)))))
+value:    (t t t)
+
+testing:  (simplify-fun '(equal (not (not (list nil))) (not (list (not nil)))))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (list (not nil)))))
+value:    (t t t)
+
+testing:  (simplify-fun '(equal (not (list (not nil))) (not (not (list nil)))))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and))
+value:    (t t t)
+
+testing:  (simplify-fun '(or))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and t t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and t t t))
+value:    (t t t)
+
+testing:  (simplify-fun '(or t))
+value:    (t t t)
+
+testing:  (simplify-fun '(or t))
+value:    (t t t)
+
+testing:  (simplify-fun '(or t t t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and nil nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and nil nil nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(or nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(or nil nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(or nil nil nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and t nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and nil t nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and nil t nil t nil))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(or t nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or nil t nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or nil t nil t nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(and a))
+value:    (t t t)
+
+testing:  (simplify-fun '(or a))
+value:    (t t t)
+
+testing:  (simplify-fun '(and t a))
+value:    (t t t)
+
+testing:  (simplify-fun '(and a t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and a t b))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and a nil t b t c))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and a t b t c))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(or nil a))
+value:    (t t t)
+
+testing:  (simplify-fun '(or a nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or t a nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or nil a t nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or nil t nil a t nil b))
+value:    (t t t)
+
+testing:  (simplify-fun '(or nil nil a t nil b))
+value:    (t t t)
+
+testing:  (simplify-fun '(and and a nil t b t c))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and and a t b t c))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(list and a nil t b t c))
+value:    (t (1 t nil t nil t 4) (1 t nil t nil t 4))
+
+testing:  (simplify-fun '(or or nil nil a t nil b))
+value:    (nil 2 t)
+
+testing:  (simplify-fun '(or or nil nil a nil b))
+value:    (t 2 2)
+
+testing:  (simplify-fun '(list or nil nil a t nil b))
+value:    (t (2 nil nil t t nil nil) (2 nil nil t t nil nil))
+
+testing:  (simplify-fun '(and (and t) (and t t t) t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and (and t) (and t a t) t))
+value:    (t t t)
+
+testing:  (simplify-fun '(and (and t) (and t nil a t) t))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and (and (or)) (and t nil a t) t))
+value:    (t nil nil)
+
+testing:  (simplify-fun '(and (and (or t)) (and t t) t))
+value:    (t t t)
+
+testing:  (simplify-fun '(list (and (and (or t)) (and t t) t)))
+value:    (t (t) (t))
+
+testing:  (simplify-fun '(list (and (and (atom (or t))) (and t t) t)))
+value:    (t (t) (t))
+
+testing:  (simplify-fun '(list (and (and b (atom (or t))) (and t t) t)))
+value:    (t (nil) (nil))
+
+testing:  (simplify-fun '(or (or t) nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or (or nil) (and t a t) nil))
+value:    (t t t)
+
+testing:  (simplify-fun '(or (or t) (and t nil a t) nil))
+value:    (t t t)
+
+testing:  
+(simplify-fun
+ '(list (and (and (not (not b)) (atom (not (or nil)))) (and t t) t)))
+value:    (t (nil) (nil))
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or t t) 3)))
+value:    (t (t) (t))
+
+testing:  
+(simplify-fun
+ '(list (or (and (not (not b)) (atom (not (and nil)))) (or 1 2) 3)))
+value:    (t (1) (1))
+
+
+          DONE TESTING
+
+;; DribbleNoTimeStamp of #<io terminal-stream> finished.

@@ -1,0 +1,939 @@
+
+TESTING np
+
+testing: np_names(Name)
+Name = grandcanyon
+
+Name = yosemite
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_names_not_yosemite(Name)
+Name = grandcanyon
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_activities_yosemite(Activity)
+Activity = [hiking,camping,rockclimbing]
+
+testing: np_states_yosemite(State)
+State = [ca]
+
+testing: np_states_grandcanyon(State)
+State = [az,ut]
+
+testing: np_states(yosemite,State)
+State = [ca]
+
+testing: np_states(grandcanyon,State)
+State = [az,ut]
+
+testing: np_states(deathvalley,State)
+State = [ca,nv]
+
+testing: np_sorted_activities_yosemite(Activity)
+Activity = [camping,hiking,rockclimbing]
+
+testing: np_single_state(State)
+State = yosemite
+
+State = everglades
+
+State = drytortugas
+
+State = lassen
+
+State = bryce
+
+State = denali
+
+State = zion
+
+testing: np_multi_state(State)
+State = grandcanyon
+
+State = deathvalley
+
+State = ww2valorinthepacific
+
+State = dinosaur
+
+testing: np_pair_names(Pair of Names)
+Pair of Names = [drytortugas,everglades]
+
+Pair of Names = [lassen,yosemite]
+
+Pair of Names = [bryce,zion]
+
+testing: np_2_state_2_activities(Name)
+Name = grandcanyon
+
+Name = deathvalley
+
+Name = dinosaur
+
+
+TESTING an OR np_12_states_1or
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_12_states_2wo
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_camping_hiking_1or
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_2wo
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_sort
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING insert
+
+testing: insert([],3,Z)
+Z = [3]
+
+testing: insert([1],0,Z)
+Z = [0,1]
+
+testing: insert([1],2,Z)
+Z = [1,2]
+
+testing: insert([1,5],0,Z)
+Z = [0,1,5]
+
+testing: insert([1,5],2,Z)
+Z = [1,2,5]
+
+testing: insert([1,5],9,Z)
+Z = [1,5,9]
+
+testing: insert([1,5,8],0,Z)
+Z = [0,1,5,8]
+
+testing: insert([1,5,8],2,Z)
+Z = [1,2,5,8]
+
+testing: insert([1,5,8],6,Z)
+Z = [1,5,6,8]
+
+testing: insert([1,5,8],9,Z)
+Z = [1,5,8,9]
+
+
+TESTING butlast
+
+testing: butlast([],Z)
+testing: butlast([1],Z)
+Z = []
+
+testing: butlast([1,2],Z)
+Z = [1]
+
+testing: butlast([1,2,3],Z)
+Z = [1,2]
+
+testing: butlast([[1,2,3]],Z)
+Z = []
+
+testing: butlast([1,[2,3]],Z)
+Z = [1]
+
+
+TESTING naaa
+
+testing: naaa([],NAL,AL)
+NAL = []
+AL = []
+
+testing: naaa([1],NAL,AL)
+NAL = [1]
+AL = []
+
+testing: naaa([a],NAL,AL)
+NAL = []
+AL = [a]
+
+testing: naaa([1,2],NAL,AL)
+NAL = [1,2]
+AL = []
+
+testing: naaa([a,b],NAL,AL)
+NAL = []
+AL = [a,b]
+
+testing: naaa([1,a],NAL,AL)
+NAL = [1]
+AL = [a]
+
+testing: naaa([a,1],NAL,AL)
+NAL = [1]
+AL = [a]
+
+testing: naaa([1,a,2],NAL,AL)
+NAL = [1,2]
+AL = [a]
+
+testing: naaa([a,1,b],NAL,AL)
+NAL = [1]
+AL = [a,b]
+
+testing: naaa([1,a,2,3,b,c,d,e,4],NAL,AL)
+NAL = [1,2,3,4]
+AL = [a,b,c,d,e]
+
+testing: naaa([a,1,2,4,3,c,d,b],NAL,AL)
+NAL = [1,2,4,3]
+AL = [a,c,d,b]
+
+testing: naaa([1,2,3,4],NAL,AL)
+NAL = [1,2,3,4]
+AL = []
+
+testing: naaa([a,c,d,b],NAL,AL)
+NAL = []
+AL = [a,c,d,b]
+
+
+TESTING splitlist
+
+testing: splitlist([],Left,2,Right)
+testing: splitlist([1,2,3],Left,2,Right)
+Left = [1]
+Right = [3]
+
+testing: splitlist([1,2,3],Left,1,Right)
+Left = []
+Right = [2,3]
+
+testing: splitlist([1,2,3],Left,3,Right)
+Left = [1,2]
+Right = []
+
+testing: splitlist([1,2,3,4,5,6],Left,3,Right)
+Left = [1,2]
+Right = [4,5,6]
+
+testing: splitlist([1,2,3,4,5,6],Left,2,Right)
+Left = [1]
+Right = [3,4,5,6]
+
+testing: splitlist([1,2,3,4,5,6],Left,1,Right)
+Left = []
+Right = [2,3,4,5,6]
+
+testing: splitlist([1,2,3,4,5,6],Left,5,Right)
+Left = [1,2,3,4]
+Right = [6]
+
+testing: splitlist([1,2,3,4,5,6],Left,6,Right)
+Left = [1,2,3,4,5]
+Right = []
+
+testing: splitlist([1,2,3,4,5,6],Left,4,Right)
+Left = [1,2,3]
+Right = [5,6]
+
+testing: splitlist([4,2,1,5,3],Left,3,Right)
+Left = [4,2,1,5]
+Right = []
+
+testing: splitlist([4,2,1,5,3],Left,2,Right)
+Left = [4]
+Right = [1,5,3]
+
+testing: splitlist([4,2,1,5,3],Left,1,Right)
+Left = [4,2]
+Right = [5,3]
+
+testing: splitlist([4,2,1,5,3],Left,5,Right)
+Left = [4,2,1]
+Right = [3]
+
+testing: splitlist([4,2,1,5,3],Left,6,Right)
+testing: splitlist([4,2,1,5,3],Left,4,Right)
+Left = []
+Right = [2,1,5,3]
+
+
+TESTING split3list
+
+testing: split3list([],2,Left,Pivot,Right)
+testing: split3list([[0,9,a]],a,Left,Pivot,Right)
+Left = []
+Pivot = [0,9,a]
+Right = []
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c]],b,Left,Pivot,Right)
+Left = [[0,9,a]]
+Pivot = [12,15,b]
+Right = [[22,25,c]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c]],c,Left,Pivot,Right)
+Left = [[0,9,a],[12,15,b]]
+Pivot = [22,25,c]
+Right = []
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c]],a,Left,Pivot,Right)
+Left = []
+Pivot = [0,9,a]
+Right = [[12,15,b],[22,25,c]]
+
+testing: split3list([[0,9,c],[12,15,a],[22,25,b]],b,Left,Pivot,Right)
+Left = [[0,9,c],[12,15,a]]
+Pivot = [22,25,b]
+Right = []
+
+testing: split3list([[0,9,c],[12,15,a],[22,25,b]],c,Left,Pivot,Right)
+Left = []
+Pivot = [0,9,c]
+Right = [[12,15,a],[22,25,b]]
+
+testing: split3list([[0,9,c],[12,15,a],[22,25,b]],a,Left,Pivot,Right)
+Left = [[0,9,c]]
+Pivot = [12,15,a]
+Right = [[22,25,b]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c],[33,5,d],[41,2,e]],a,Left,Pivot,Right)
+Left = []
+Pivot = [0,9,a]
+Right = [[12,15,b],[22,25,c],[33,5,d],[41,2,e]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c],[33,5,d],[41,2,e]],b,Left,Pivot,Right)
+Left = [[0,9,a]]
+Pivot = [12,15,b]
+Right = [[22,25,c],[33,5,d],[41,2,e]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c],[33,5,d],[41,2,e]],c,Left,Pivot,Right)
+Left = [[0,9,a],[12,15,b]]
+Pivot = [22,25,c]
+Right = [[33,5,d],[41,2,e]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c],[33,5,d],[41,2,e]],d,Left,Pivot,Right)
+Left = [[0,9,a],[12,15,b],[22,25,c]]
+Pivot = [33,5,d]
+Right = [[41,2,e]]
+
+testing: split3list([[0,9,a],[12,15,b],[22,25,c],[33,5,d],[41,2,e]],e,Left,Pivot,Right)
+Left = [[0,9,a],[12,15,b],[22,25,c],[33,5,d]]
+Pivot = [41,2,e]
+Right = []
+
+
+TESTING perm
+
+
+TESTING a perm perm
+
+testing: perm([],Z)
+Z = []
+
+testing: perm([1],Z)
+Z = [1]
+
+testing: perm([1,2],Z)
+Z = [1,2]
+
+Z = [2,1]
+
+testing: perm([1,2,3],Z)
+Z = [1,2,3]
+
+Z = [1,3,2]
+
+Z = [2,1,3]
+
+Z = [2,3,1]
+
+Z = [3,1,2]
+
+Z = [3,2,1]
+
+testing: perm([a],Z)
+Z = [a]
+
+testing: perm([a,b],Z)
+Z = [a,b]
+
+Z = [b,a]
+
+testing: perm([a,b,c],Z)
+Z = [a,b,c]
+
+Z = [a,c,b]
+
+Z = [b,a,c]
+
+Z = [b,c,a]
+
+Z = [c,a,b]
+
+Z = [c,b,a]
+
+testing: perm([a,1,b],Z)
+Z = [a,1,b]
+
+Z = [a,b,1]
+
+Z = [1,a,b]
+
+Z = [1,b,a]
+
+Z = [b,a,1]
+
+Z = [b,1,a]
+
+testing: perm([1,a,2],Z)
+Z = [1,a,2]
+
+Z = [1,2,a]
+
+Z = [a,1,2]
+
+Z = [a,2,1]
+
+Z = [2,1,a]
+
+Z = [2,a,1]
+
+testing: perm([a,1,b,2],Z)
+Z = [a,1,b,2]
+
+Z = [a,1,2,b]
+
+Z = [a,b,1,2]
+
+Z = [a,b,2,1]
+
+Z = [a,2,1,b]
+
+Z = [a,2,b,1]
+
+Z = [1,a,b,2]
+
+Z = [1,a,2,b]
+
+Z = [1,b,a,2]
+
+Z = [1,b,2,a]
+
+Z = [1,2,a,b]
+
+Z = [1,2,b,a]
+
+Z = [b,a,1,2]
+
+Z = [b,a,2,1]
+
+Z = [b,1,a,2]
+
+Z = [b,1,2,a]
+
+Z = [b,2,a,1]
+
+Z = [b,2,1,a]
+
+Z = [2,a,1,b]
+
+Z = [2,a,b,1]
+
+Z = [2,1,a,b]
+
+Z = [2,1,b,a]
+
+Z = [2,b,a,1]
+
+Z = [2,b,1,a]
+
+testing: perm([a,1,2,b],Z)
+Z = [a,1,2,b]
+
+Z = [a,1,b,2]
+
+Z = [a,2,1,b]
+
+Z = [a,2,b,1]
+
+Z = [a,b,1,2]
+
+Z = [a,b,2,1]
+
+Z = [1,a,2,b]
+
+Z = [1,a,b,2]
+
+Z = [1,2,a,b]
+
+Z = [1,2,b,a]
+
+Z = [1,b,a,2]
+
+Z = [1,b,2,a]
+
+Z = [2,a,1,b]
+
+Z = [2,a,b,1]
+
+Z = [2,1,a,b]
+
+Z = [2,1,b,a]
+
+Z = [2,b,a,1]
+
+Z = [2,b,1,a]
+
+Z = [b,a,1,2]
+
+Z = [b,a,2,1]
+
+Z = [b,1,a,2]
+
+Z = [b,1,2,a]
+
+Z = [b,2,a,1]
+
+Z = [b,2,1,a]
+
+
+TESTING permsub
+
+
+TESTING a perm permsub
+
+testing: permsub([],Z)
+Z = []
+
+testing: permsub([1],Z)
+Z = [1]
+
+testing: permsub([1,2],Z)
+Z = [1,2]
+
+testing: permsub([1,2,3],Z)
+Z = [1,2,3]
+
+testing: permsub([a],Z)
+Z = [a]
+
+testing: permsub([a,b],Z)
+Z = [a,b]
+
+Z = [b,a]
+
+testing: permsub([a,b,c],Z)
+Z = [a,b,c]
+
+Z = [a,c,b]
+
+Z = [b,a,c]
+
+Z = [b,c,a]
+
+Z = [c,a,b]
+
+Z = [c,b,a]
+
+testing: permsub([a,1,b],Z)
+Z = [a,1,b]
+
+Z = [a,b,1]
+
+Z = [1,a,b]
+
+Z = [1,b,a]
+
+Z = [b,a,1]
+
+Z = [b,1,a]
+
+testing: permsub([1,a,2],Z)
+Z = [1,a,2]
+
+Z = [1,2,a]
+
+Z = [a,1,2]
+
+testing: permsub([a,1,b,2],Z)
+Z = [a,1,b,2]
+
+Z = [a,1,2,b]
+
+Z = [a,b,1,2]
+
+Z = [1,a,b,2]
+
+Z = [1,a,2,b]
+
+Z = [1,b,a,2]
+
+Z = [1,b,2,a]
+
+Z = [1,2,a,b]
+
+Z = [1,2,b,a]
+
+Z = [b,a,1,2]
+
+Z = [b,1,a,2]
+
+Z = [b,1,2,a]
+
+testing: permsub([a,1,2,b],Z)
+Z = [a,1,2,b]
+
+Z = [a,1,b,2]
+
+Z = [a,b,1,2]
+
+Z = [1,a,2,b]
+
+Z = [1,a,b,2]
+
+Z = [1,2,a,b]
+
+Z = [1,2,b,a]
+
+Z = [1,b,a,2]
+
+Z = [1,b,2,a]
+
+Z = [b,a,1,2]
+
+Z = [b,1,a,2]
+
+Z = [b,1,2,a]
+
+
+TESTING fit1stRequest
+
+
+TESTING a request fit1stRequest
+
+testing: fit1stRequest([],[[0,9,z]],M)
+testing: fit1stRequest([a,9],[[0,9,z]],M)
+M = [[0,9,a]]
+
+testing: fit1stRequest([a,9],[[0,8,z]],M)
+testing: fit1stRequest([a,2],[[0,9,z]],M)
+M = [[0,2,a],[2,7,z]]
+
+testing: fit1stRequest([a,32],[[0,9,z]],M)
+testing: fit1stRequest([b,3],[[0,2,a],[2,7,z]],M)
+M = [[0,2,a],[2,3,b],[5,4,z]]
+
+testing: fit1stRequest([b,3],[[0,8,a],[8,1,z]],M)
+testing: fit1stRequest([c,2],[[0,2,a],[2,3,b],[5,4,z]],M)
+M = [[0,2,a],[2,3,b],[5,2,c],[7,2,z]]
+
+testing: fit1stRequest([d,2],[[0,2,a],[2,2,z],[4,2,b],[6,2,z],[8,2,c],[10,2,z]],M)
+M = [[0,2,a],[2,2,d],[4,2,b],[6,2,z],[8,2,c],[10,2,z]]
+
+testing: fit1stRequest([d,5],[[0,3,z],[3,6,b],[9,3,z]],M)
+testing: fit1stRequest([a,2],[[0,2,e],[2,6,f],[8,2,z]],M)
+M = [[0,2,e],[2,6,f],[8,2,a]]
+
+
+TESTING fitRelease
+
+testing: fitRelease(a,[[0,9,a]],M)
+M = [[0,9,z]]
+
+testing: fitRelease(a,[[0,2,a],[2,7,z]],M)
+M = [[0,9,z]]
+
+testing: fitRelease(a,[[0,2,a],[2,3,b],[5,4,z]],M)
+M = [[0,2,z],[2,3,b],[5,4,z]]
+
+testing: fitRelease(b,[[0,2,a],[2,3,b],[5,4,z]],M)
+M = [[0,2,a],[2,7,z]]
+
+testing: fitRelease(a,[[0,3,z],[3,3,a],[6,2,c],[8,1,z]],M)
+M = [[0,6,z],[6,2,c],[8,1,z]]
+
+testing: fitRelease(a,[[0,3,a],[3,3,z],[6,2,c],[8,1,z]],M)
+M = [[0,6,z],[6,2,c],[8,1,z]]
+
+testing: fitRelease(a,[[0,3,c],[3,3,z],[6,2,a],[8,1,b]],M)
+M = [[0,3,c],[3,5,z],[8,1,b]]
+
+testing: fitRelease(a,[[0,3,c],[3,3,z],[6,2,a],[8,1,z]],M)
+M = [[0,3,c],[3,6,z]]
+
+testing: fitRelease(a,[[0,3,a],[3,3,b],[6,2,c],[8,1,z]],M)
+M = [[0,3,z],[3,3,b],[6,2,c],[8,1,z]]
+
+testing: fitRelease(b,[[0,3,a],[3,3,b],[6,2,c],[8,1,z]],M)
+M = [[0,3,a],[3,3,z],[6,2,c],[8,1,z]]
+
+testing: fitRelease(c,[[0,3,a],[3,3,b],[6,2,c],[8,1,z]],M)
+M = [[0,3,a],[3,3,b],[6,3,z]]
+
+
+TESTING fitanyRequest
+
+
+TESTING a request fitanyRequest
+
+testing: fitanyRequest([],[[0,9,z]],M)
+testing: fitanyRequest([a,9],[[0,9,z]],M)
+M = [[0,9,a]]
+
+testing: fitanyRequest([a,9],[[0,8,z]],M)
+testing: fitanyRequest([a,2],[[0,9,z]],M)
+M = [[0,2,a],[2,7,z]]
+
+testing: fitanyRequest([a,32],[[0,9,z]],M)
+testing: fitanyRequest([b,3],[[0,2,a],[2,7,z]],M)
+M = [[0,2,a],[2,3,b],[5,4,z]]
+
+testing: fitanyRequest([b,3],[[0,8,a],[8,1,z]],M)
+testing: fitanyRequest([c,2],[[0,2,a],[2,3,b],[5,4,z]],M)
+M = [[0,2,a],[2,3,b],[5,2,c],[7,2,z]]
+
+testing: fitanyRequest([d,2],[[0,2,a],[2,2,z],[4,2,b],[6,2,z],[8,2,c],[10,2,z]],M)
+M = [[0,2,a],[2,2,d],[4,2,b],[6,2,z],[8,2,c],[10,2,z]]
+
+M = [[0,2,a],[2,2,z],[4,2,b],[6,2,d],[8,2,c],[10,2,z]]
+
+M = [[0,2,a],[2,2,z],[4,2,b],[6,2,z],[8,2,c],[10,2,d]]
+
+testing: fitanyRequest([d,5],[[0,3,z],[3,6,b],[9,3,z]],M)
+testing: fitanyRequest([a,2],[[0,2,e],[2,6,f],[8,2,z]],M)
+M = [[0,2,e],[2,6,f],[8,2,a]]
+
+
+TESTING fit1st
+
+
+TESTING a fit fit1st
+
+testing: fit1st([],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,9]],[[0,9,z]],M)
+M = [[0,9,a]]
+
+testing: fit1st([[a,9]],[[0,8,z]],M)
+testing: fit1st([[a,2]],[[0,9,z]],M)
+M = [[0,2,a],[2,7,z]]
+
+testing: fit1st([[a,32]],[[0,9,z]],M)
+testing: fit1st([[a,2],a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],a,[b,3],b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],a,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],b,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,8],a,[b,3],b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,3],[b,3],a,[c,3]],[[0,6,z]],M)
+M = [[0,3,c],[3,3,b]]
+
+testing: fit1st([[a,3],[b,3],b,[c,3]],[[0,6,z]],M)
+M = [[0,3,a],[3,3,c]]
+
+testing: fit1st([[a,3],[b,3],a,[c,2]],[[0,6,z]],M)
+M = [[0,2,c],[2,1,z],[3,3,b]]
+
+testing: fit1st([[a,3],[b,3],b,[c,2]],[[0,6,z]],M)
+M = [[0,3,a],[3,2,c],[5,1,z]]
+
+testing: fit1st([[a,8],[b,3],a,b],[[0,9,z]],M)
+testing: fit1st([[a,2],[b,3],[c,2],a,b,c],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],[c,2],b,a,c],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],[c,2],c,b,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],[c,2],c,a,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],[c,2],b,c,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,2],[b,3],[c,2],a,c,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fit1st([[a,3],[b,3],[c,3],a,c,[d,5]],[[0,9,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],c,a,[e,2],[f,4]],[[0,6,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],c,a,[e,2],[f,4],e],[[0,6,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],d,a,[f,4]],[[0,6,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],d,a,[f,4],c,[g,4]],[[0,8,z]],M)
+M = [[0,4,g],[4,4,f]]
+
+testing: fit1st([[a,2],[c,2],[d,2],d,[f,4],a,c,[g,4]],[[0,8,z]],M)
+M = [[0,4,g],[4,4,f]]
+
+testing: fit1st([[a,2],[c,2],[d,2],d,[f,4],a,c,[g,2]],[[0,8,z]],M)
+M = [[0,2,g],[2,2,z],[4,4,f]]
+
+testing: fit1st([[a,2],[c,2],[d,2],d,[f,4],[g,2],f],[[0,8,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],c,[g,2],d,[f,4]],[[0,8,z]],M)
+M = [[0,2,a],[2,2,g],[4,4,f]]
+
+testing: fit1st([[a,2],[c,2],[d,2],c,[f,4],d],[[0,8,z]],M)
+testing: fit1st([[a,2],[c,2],[d,2],c,a,[e,2],[f,4]],[[0,8,z]],M)
+testing: fit1st([[a,2],[b,2],[c,2],[d,2],d,a,[e,2],b,[f,4]],[[0,8,z]],M)
+testing: fit1st([[a,3],[b,3],[c,3],a,c],[[0,9,z]],M)
+M = [[0,3,z],[3,3,b],[6,3,z]]
+
+testing: fit1st([[a,3],[b,3],[c,3],a],[[0,9,z]],M)
+M = [[0,3,z],[3,3,b],[6,3,c]]
+
+testing: fit1st([[b,3],[c,3]],[[0,3,z],[3,3,a],[6,3,z]],M)
+M = [[0,3,b],[3,3,a],[6,3,c]]
+
+testing: fit1st([[a,3],[b,3],[c,3],a,c,[d,5]],[[0,2,e],[2,9,z]],M)
+
+TESTING fitany
+
+
+TESTING a fit fitany
+
+testing: fitany([],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,9]],[[0,9,z]],M)
+M = [[0,9,a]]
+
+testing: fitany([[a,9]],[[0,8,z]],M)
+testing: fitany([[a,2]],[[0,9,z]],M)
+M = [[0,2,a],[2,7,z]]
+
+testing: fitany([[a,32]],[[0,9,z]],M)
+testing: fitany([[a,2],a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],a,[b,3],b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],a,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],b,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,8],a,[b,3],b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,3],[b,3],a,[c,3]],[[0,6,z]],M)
+M = [[0,3,c],[3,3,b]]
+
+testing: fitany([[a,3],[b,3],b,[c,3]],[[0,6,z]],M)
+M = [[0,3,a],[3,3,c]]
+
+testing: fitany([[a,3],[b,3],a,[c,2]],[[0,6,z]],M)
+M = [[0,2,c],[2,1,z],[3,3,b]]
+
+testing: fitany([[a,3],[b,3],b,[c,2]],[[0,6,z]],M)
+M = [[0,3,a],[3,2,c],[5,1,z]]
+
+testing: fitany([[a,8],[b,3],a,b],[[0,9,z]],M)
+testing: fitany([[a,2],[b,3],[c,2],a,b,c],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],[c,2],b,a,c],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],[c,2],c,b,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],[c,2],c,a,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],[c,2],b,c,a],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,2],[b,3],[c,2],a,c,b],[[0,9,z]],M)
+M = [[0,9,z]]
+
+testing: fitany([[a,3],[b,3],[c,3],a,c,[d,5]],[[0,9,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],c,a,[e,2],[f,4]],[[0,6,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],c,a,[e,2],[f,4],e],[[0,6,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],d,a,[f,4]],[[0,6,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],d,a,[f,4],c,[g,4]],[[0,8,z]],M)
+M = [[0,4,g],[4,4,f]]
+
+testing: fitany([[a,2],[c,2],[d,2],d,[f,4],a,c,[g,4]],[[0,8,z]],M)
+M = [[0,4,g],[4,4,f]]
+
+testing: fitany([[a,2],[c,2],[d,2],d,[f,4],a,c,[g,2]],[[0,8,z]],M)
+M = [[0,2,g],[2,2,z],[4,4,f]]
+
+testing: fitany([[a,2],[c,2],[d,2],d,[f,4],[g,2],f],[[0,8,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],c,[g,2],d,[f,4]],[[0,8,z]],M)
+M = [[0,2,a],[2,2,g],[4,4,f]]
+
+M = [[0,2,a],[2,4,f],[6,2,g]]
+
+testing: fitany([[a,2],[c,2],[d,2],c,[f,4],d],[[0,8,z]],M)
+testing: fitany([[a,2],[c,2],[d,2],c,a,[e,2],[f,4]],[[0,8,z]],M)
+M = [[0,4,f],[4,2,d],[6,2,e]]
+
+testing: fitany([[a,2],[b,2],[c,2],[d,2],d,a,[e,2],b,[f,4]],[[0,8,z]],M)
+M = [[0,4,f],[4,2,c],[6,2,e]]
+
+testing: fitany([[a,3],[b,3],[c,3],a,c],[[0,9,z]],M)
+M = [[0,3,z],[3,3,b],[6,3,z]]
+
+testing: fitany([[a,3],[b,3],[c,3],a],[[0,9,z]],M)
+M = [[0,3,z],[3,3,b],[6,3,c]]
+
+testing: fitany([[b,3],[c,3]],[[0,3,z],[3,3,a],[6,3,z]],M)
+M = [[0,3,b],[3,3,a],[6,3,c]]
+
+M = [[0,3,c],[3,3,a],[6,3,b]]
+
+testing: fitany([[a,3],[b,3],[c,3],a,c,[d,5]],[[0,2,e],[2,9,z]],M)

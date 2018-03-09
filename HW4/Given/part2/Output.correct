@@ -1,0 +1,238 @@
+
+TESTING np
+
+testing: np_names(Name)
+Name = grandcanyon
+
+Name = yosemite
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_names_not_yosemite(Name)
+Name = grandcanyon
+
+Name = everglades
+
+Name = drytortugas
+
+Name = lassen
+
+Name = deathvalley
+
+Name = ww2valorinthepacific
+
+Name = dinosaur
+
+Name = bryce
+
+Name = denali
+
+Name = zion
+
+testing: np_activities_yosemite(Activity)
+Activity = [hiking,camping,rockclimbing]
+
+testing: np_states_yosemite(State)
+State = [ca]
+
+testing: np_states_grandcanyon(State)
+State = [az,ut]
+
+testing: np_states(yosemite,State)
+State = [ca]
+
+testing: np_states(grandcanyon,State)
+State = [az,ut]
+
+testing: np_states(deathvalley,State)
+State = [ca,nv]
+
+testing: np_sorted_activities_yosemite(Activity)
+Activity = [camping,hiking,rockclimbing]
+
+testing: np_single_state(State)
+State = yosemite
+
+State = everglades
+
+State = drytortugas
+
+State = lassen
+
+State = bryce
+
+State = denali
+
+State = zion
+
+testing: np_multi_state(State)
+State = grandcanyon
+
+State = deathvalley
+
+State = ww2valorinthepacific
+
+State = dinosaur
+
+testing: np_pair_names(Pair of Names)
+Pair of Names = [drytortugas,everglades]
+
+Pair of Names = [lassen,yosemite]
+
+Pair of Names = [bryce,zion]
+
+testing: np_2_state_2_activities(Name)
+Name = grandcanyon
+
+Name = deathvalley
+
+Name = dinosaur
+
+
+TESTING an OR np_12_states_1or
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_12_states_2wo
+
+Sorted_List_of_parks = [bryce,deathvalley,denali,dinosaur,drytortugas,everglades,grandcanyon,lassen,yosemite,zion]
+
+
+TESTING an OR np_camping_hiking_1or
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_2wo
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING an OR np_camping_hiking_sort
+
+Sorted_List_of_parks = [bryce,denali,grandcanyon,zion]
+
+
+TESTING insert
+
+testing: insert([],3,Z)
+Z = [3]
+
+testing: insert([1],0,Z)
+Z = [0,1]
+
+testing: insert([1],2,Z)
+Z = [1,2]
+
+testing: insert([1,5],0,Z)
+Z = [0,1,5]
+
+testing: insert([1,5],2,Z)
+Z = [1,2,5]
+
+testing: insert([1,5],9,Z)
+Z = [1,5,9]
+
+testing: insert([1,5,8],0,Z)
+Z = [0,1,5,8]
+
+testing: insert([1,5,8],2,Z)
+Z = [1,2,5,8]
+
+testing: insert([1,5,8],6,Z)
+Z = [1,5,6,8]
+
+testing: insert([1,5,8],9,Z)
+Z = [1,5,8,9]
+
+
+TESTING butlast
+
+testing: butlast([],Z)
+testing: butlast([1],Z)
+Z = []
+
+testing: butlast([1,2],Z)
+Z = [1]
+
+testing: butlast([1,2,3],Z)
+Z = [1,2]
+
+testing: butlast([[1,2,3]],Z)
+Z = []
+
+testing: butlast([1,[2,3]],Z)
+Z = [1]
+
+
+TESTING naaa
+
+testing: naaa([],NAL,AL)
+NAL = []
+AL = []
+
+testing: naaa([1],NAL,AL)
+NAL = [1]
+AL = []
+
+testing: naaa([a],NAL,AL)
+NAL = []
+AL = [a]
+
+testing: naaa([1,2],NAL,AL)
+NAL = [1,2]
+AL = []
+
+testing: naaa([a,b],NAL,AL)
+NAL = []
+AL = [a,b]
+
+testing: naaa([1,a],NAL,AL)
+NAL = [1]
+AL = [a]
+
+testing: naaa([a,1],NAL,AL)
+NAL = [1]
+AL = [a]
+
+testing: naaa([1,a,2],NAL,AL)
+NAL = [1,2]
+AL = [a]
+
+testing: naaa([a,1,b],NAL,AL)
+NAL = [1]
+AL = [a,b]
+
+testing: naaa([1,a,2,3,b,c,d,e,4],NAL,AL)
+NAL = [1,2,3,4]
+AL = [a,b,c,d,e]
+
+testing: naaa([a,1,2,4,3,c,d,b],NAL,AL)
+NAL = [1,2,4,3]
+AL = [a,c,d,b]
+
+testing: naaa([1,2,3,4],NAL,AL)
+NAL = [1,2,3,4]
+AL = []
+
+testing: naaa([a,c,d,b],NAL,AL)
+NAL = []
+AL = [a,c,d,b]
+
